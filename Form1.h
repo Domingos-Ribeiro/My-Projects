@@ -56,7 +56,7 @@ namespace ProjetoCLR {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(478, 517);
 			this->Name = L"Form1";
-			this->Text = L"Form1";
+			this->Text = L"Computer Programming Course - Initiation (216 Hours)";
 			this->ResumeLayout(false);
 
 			}
