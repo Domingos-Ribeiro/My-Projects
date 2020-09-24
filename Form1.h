@@ -273,7 +273,7 @@ namespace ProjetoCLR {
 					this->documentsToolStripMenuItem3, this->tipsToolStripMenuItem3, this->fianalProjectToolStripMenuItem
 				});
 			this->hTMLToolStripMenuItem->Name = L"hTMLToolStripMenuItem";
-			this->hTMLToolStripMenuItem->Size = System::Drawing::Size(107, 22);
+			this->hTMLToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->hTMLToolStripMenuItem->Text = L"HTML";
 			// 
 			// classToolStripMenuItem3
@@ -393,7 +393,7 @@ namespace ProjetoCLR {
 					this->documentsToolStripMenuItem2, this->tipsToolStripMenuItem2, this->finalProjectToolStripMenuItem1
 				});
 			this->cSSToolStripMenuItem->Name = L"cSSToolStripMenuItem";
-			this->cSSToolStripMenuItem->Size = System::Drawing::Size(107, 22);
+			this->cSSToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->cSSToolStripMenuItem->Text = L"CSS";
 			// 
 			// classToolStripMenuItem2
@@ -513,7 +513,7 @@ namespace ProjetoCLR {
 					this->documentsToolStripMenuItem1, this->tipsToolStripMenuItem1, this->finalExamToolStripMenuItem
 				});
 			this->cToolStripMenuItem->Name = L"cToolStripMenuItem";
-			this->cToolStripMenuItem->Size = System::Drawing::Size(107, 22);
+			this->cToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->cToolStripMenuItem->Text = L"C++";
 			// 
 			// classToolStripMenuItem1
@@ -526,7 +526,7 @@ namespace ProjetoCLR {
 					this->toolStripMenuItem26, this->toolStripMenuItem27, this->toolStripMenuItem28
 				});
 			this->classToolStripMenuItem1->Name = L"classToolStripMenuItem1";
-			this->classToolStripMenuItem1->Size = System::Drawing::Size(135, 22);
+			this->classToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->classToolStripMenuItem1->Text = L"Class";
 			// 
 			// toolStripMenuItem15
@@ -616,19 +616,19 @@ namespace ProjetoCLR {
 			// documentsToolStripMenuItem1
 			// 
 			this->documentsToolStripMenuItem1->Name = L"documentsToolStripMenuItem1";
-			this->documentsToolStripMenuItem1->Size = System::Drawing::Size(135, 22);
+			this->documentsToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->documentsToolStripMenuItem1->Text = L"Documents";
 			// 
 			// tipsToolStripMenuItem1
 			// 
 			this->tipsToolStripMenuItem1->Name = L"tipsToolStripMenuItem1";
-			this->tipsToolStripMenuItem1->Size = System::Drawing::Size(135, 22);
+			this->tipsToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->tipsToolStripMenuItem1->Text = L"Tips";
 			// 
 			// finalExamToolStripMenuItem
 			// 
 			this->finalExamToolStripMenuItem->Name = L"finalExamToolStripMenuItem";
-			this->finalExamToolStripMenuItem->Size = System::Drawing::Size(135, 22);
+			this->finalExamToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->finalExamToolStripMenuItem->Text = L"Final Exam";
 			// 
 			// cToolStripMenuItem1
@@ -639,7 +639,7 @@ namespace ProjetoCLR {
 					this->documentsToolStripMenuItem, this->tipsToolStripMenuItem, this->finalProjectToolStripMenuItem
 				});
 			this->cToolStripMenuItem1->Name = L"cToolStripMenuItem1";
-			this->cToolStripMenuItem1->Size = System::Drawing::Size(107, 22);
+			this->cToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->cToolStripMenuItem1->Text = L"C#";
 			// 
 			// classToolStripMenuItem
@@ -765,13 +765,13 @@ namespace ProjetoCLR {
 			// hTMLAndCSSToolStripMenuItem
 			// 
 			this->hTMLAndCSSToolStripMenuItem->Name = L"hTMLAndCSSToolStripMenuItem";
-			this->hTMLAndCSSToolStripMenuItem->Size = System::Drawing::Size(153, 22);
+			this->hTMLAndCSSToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->hTMLAndCSSToolStripMenuItem->Text = L"HTML and CSS";
 			// 
 			// cSharpToolStripMenuItem
 			// 
 			this->cSharpToolStripMenuItem->Name = L"cSharpToolStripMenuItem";
-			this->cSharpToolStripMenuItem->Size = System::Drawing::Size(153, 22);
+			this->cSharpToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->cSharpToolStripMenuItem->Text = L"C Sharp";
 			// 
 			// helpToolStripMenuItem
@@ -788,13 +788,14 @@ namespace ProjetoCLR {
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(111, 22);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->aboutToolStripMenuItem->Text = L"About";
+			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::aboutToolStripMenuItem_Click);
 			// 
 			// creditsToolStripMenuItem
 			// 
 			this->creditsToolStripMenuItem->Name = L"creditsToolStripMenuItem";
-			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
+			this->creditsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			// 
 			// Form1
@@ -816,5 +817,9 @@ namespace ProjetoCLR {
 
 			}
 #pragma endregion
-	};
+	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+		MessageBox::Show("Version: 1.0.01\n25/09/2020");
+		}
+};
 }
