@@ -119,6 +119,11 @@ namespace ProjetoCLR {
 	private: System::Windows::Forms::ToolStripMenuItem^ cSharpToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ creditsToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ newToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ openToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ saveToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ saveAsToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ closeToolStripMenuItem;
 
 	private:
 		/// <summary>
@@ -218,6 +223,11 @@ namespace ProjetoCLR {
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->newToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->openToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->saveToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->saveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->closeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -238,6 +248,11 @@ namespace ProjetoCLR {
 			// 
 			// fileToolStripMenuItem
 			// 
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5)
+				{
+				this->newToolStripMenuItem,
+					this->openToolStripMenuItem, this->saveToolStripMenuItem, this->saveAsToolStripMenuItem, this->closeToolStripMenuItem
+				});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
 			this->fileToolStripMenuItem->Size = System::Drawing::Size(37, 20);
 			this->fileToolStripMenuItem->Text = L"File";
@@ -526,7 +541,7 @@ namespace ProjetoCLR {
 					this->toolStripMenuItem26, this->toolStripMenuItem27, this->toolStripMenuItem28
 				});
 			this->classToolStripMenuItem1->Name = L"classToolStripMenuItem1";
-			this->classToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->classToolStripMenuItem1->Size = System::Drawing::Size(135, 22);
 			this->classToolStripMenuItem1->Text = L"Class";
 			// 
 			// toolStripMenuItem15
@@ -616,19 +631,19 @@ namespace ProjetoCLR {
 			// documentsToolStripMenuItem1
 			// 
 			this->documentsToolStripMenuItem1->Name = L"documentsToolStripMenuItem1";
-			this->documentsToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->documentsToolStripMenuItem1->Size = System::Drawing::Size(135, 22);
 			this->documentsToolStripMenuItem1->Text = L"Documents";
 			// 
 			// tipsToolStripMenuItem1
 			// 
 			this->tipsToolStripMenuItem1->Name = L"tipsToolStripMenuItem1";
-			this->tipsToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->tipsToolStripMenuItem1->Size = System::Drawing::Size(135, 22);
 			this->tipsToolStripMenuItem1->Text = L"Tips";
 			// 
 			// finalExamToolStripMenuItem
 			// 
 			this->finalExamToolStripMenuItem->Name = L"finalExamToolStripMenuItem";
-			this->finalExamToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->finalExamToolStripMenuItem->Size = System::Drawing::Size(135, 22);
 			this->finalExamToolStripMenuItem->Text = L"Final Exam";
 			// 
 			// cToolStripMenuItem1
@@ -765,13 +780,13 @@ namespace ProjetoCLR {
 			// hTMLAndCSSToolStripMenuItem
 			// 
 			this->hTMLAndCSSToolStripMenuItem->Name = L"hTMLAndCSSToolStripMenuItem";
-			this->hTMLAndCSSToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->hTMLAndCSSToolStripMenuItem->Size = System::Drawing::Size(153, 22);
 			this->hTMLAndCSSToolStripMenuItem->Text = L"HTML and CSS";
 			// 
 			// cSharpToolStripMenuItem
 			// 
 			this->cSharpToolStripMenuItem->Name = L"cSharpToolStripMenuItem";
-			this->cSharpToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->cSharpToolStripMenuItem->Size = System::Drawing::Size(153, 22);
 			this->cSharpToolStripMenuItem->Text = L"C Sharp";
 			// 
 			// helpToolStripMenuItem
@@ -788,15 +803,45 @@ namespace ProjetoCLR {
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->aboutToolStripMenuItem->Text = L"About";
 			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::aboutToolStripMenuItem_Click);
 			// 
 			// creditsToolStripMenuItem
 			// 
 			this->creditsToolStripMenuItem->Name = L"creditsToolStripMenuItem";
-			this->creditsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
+			// 
+			// newToolStripMenuItem
+			// 
+			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
+			this->newToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->newToolStripMenuItem->Text = L"New";
+			// 
+			// openToolStripMenuItem
+			// 
+			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
+			this->openToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->openToolStripMenuItem->Text = L"Open";
+			// 
+			// saveToolStripMenuItem
+			// 
+			this->saveToolStripMenuItem->Name = L"saveToolStripMenuItem";
+			this->saveToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->saveToolStripMenuItem->Text = L"Save";
+			// 
+			// saveAsToolStripMenuItem
+			// 
+			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->saveAsToolStripMenuItem->Text = L"Save as";
+			// 
+			// closeToolStripMenuItem
+			// 
+			this->closeToolStripMenuItem->Name = L"closeToolStripMenuItem";
+			this->closeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->closeToolStripMenuItem->Text = L"Close";
 			// 
 			// Form1
 			// 
@@ -809,7 +854,7 @@ namespace ProjetoCLR {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Computer Programming Course - Initiation (216 Hours)";
+			this->Text = L" ";
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
