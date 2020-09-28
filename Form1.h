@@ -132,12 +132,14 @@ private: System::Windows::Forms::ToolStripMenuItem^ backgroundToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem55;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem56;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
+private: System::Windows::Forms::Timer^ timer1;
+private: System::ComponentModel::IContainer^ components;
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -146,6 +148,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -160,6 +163,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 			this->deleteToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->cutToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->viewToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->backgroundToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem55 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem56 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem57 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->projectsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->hTMLToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->classToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -240,10 +247,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->backgroundToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem55 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem56 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem57 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -276,32 +280,33 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->newToolStripMenuItem->Text = L"New";
 			// 
 			// openToolStripMenuItem
 			// 
 			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->openToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->openToolStripMenuItem->Text = L"Open";
 			// 
 			// saveToolStripMenuItem
 			// 
 			this->saveToolStripMenuItem->Name = L"saveToolStripMenuItem";
-			this->saveToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->saveToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->saveToolStripMenuItem->Text = L"Save";
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->saveAsToolStripMenuItem->Text = L"Save as";
 			// 
 			// closeToolStripMenuItem
 			// 
 			this->closeToolStripMenuItem->Name = L"closeToolStripMenuItem";
-			this->closeToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->closeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->closeToolStripMenuItem->Text = L"Close";
+			this->closeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::closeToolStripMenuItem_Click);
 			// 
 			// editToolStripMenuItem
 			// 
@@ -349,6 +354,37 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 			this->viewToolStripMenuItem->Size = System::Drawing::Size(44, 20);
 			this->viewToolStripMenuItem->Text = L"View";
 			// 
+			// backgroundToolStripMenuItem
+			// 
+			this->backgroundToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3)
+				{
+				this->toolStripMenuItem55,
+					this->toolStripMenuItem56, this->toolStripMenuItem57
+				});
+			this->backgroundToolStripMenuItem->Name = L"backgroundToolStripMenuItem";
+			this->backgroundToolStripMenuItem->Size = System::Drawing::Size(138, 22);
+			this->backgroundToolStripMenuItem->Text = L"Background";
+			// 
+			// toolStripMenuItem55
+			// 
+			this->toolStripMenuItem55->Name = L"toolStripMenuItem55";
+			this->toolStripMenuItem55->Size = System::Drawing::Size(86, 22);
+			this->toolStripMenuItem55->Text = L"01";
+			this->toolStripMenuItem55->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem55_Click);
+			// 
+			// toolStripMenuItem56
+			// 
+			this->toolStripMenuItem56->Name = L"toolStripMenuItem56";
+			this->toolStripMenuItem56->Size = System::Drawing::Size(86, 22);
+			this->toolStripMenuItem56->Text = L"02";
+			// 
+			// toolStripMenuItem57
+			// 
+			this->toolStripMenuItem57->Name = L"toolStripMenuItem57";
+			this->toolStripMenuItem57->Size = System::Drawing::Size(86, 22);
+			this->toolStripMenuItem57->Text = L"03";
+			this->toolStripMenuItem57->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem57_Click);
+			// 
 			// projectsToolStripMenuItem
 			// 
 			this->projectsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4)
@@ -368,7 +404,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 					this->documentsToolStripMenuItem3, this->tipsToolStripMenuItem3, this->fianalProjectToolStripMenuItem
 				});
 			this->hTMLToolStripMenuItem->Name = L"hTMLToolStripMenuItem";
-			this->hTMLToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->hTMLToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->hTMLToolStripMenuItem->Text = L"HTML";
 			// 
 			// classToolStripMenuItem3
@@ -488,7 +524,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 					this->documentsToolStripMenuItem2, this->tipsToolStripMenuItem2, this->finalProjectToolStripMenuItem1
 				});
 			this->cSSToolStripMenuItem->Name = L"cSSToolStripMenuItem";
-			this->cSSToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->cSSToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->cSSToolStripMenuItem->Text = L"CSS";
 			// 
 			// classToolStripMenuItem2
@@ -608,7 +644,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 					this->documentsToolStripMenuItem1, this->tipsToolStripMenuItem1, this->finalExamToolStripMenuItem
 				});
 			this->cToolStripMenuItem->Name = L"cToolStripMenuItem";
-			this->cToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->cToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->cToolStripMenuItem->Text = L"C++";
 			// 
 			// classToolStripMenuItem1
@@ -734,7 +770,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 					this->documentsToolStripMenuItem, this->tipsToolStripMenuItem, this->finalProjectToolStripMenuItem
 				});
 			this->cToolStripMenuItem1->Name = L"cToolStripMenuItem1";
-			this->cToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->cToolStripMenuItem1->Size = System::Drawing::Size(107, 22);
 			this->cToolStripMenuItem1->Text = L"C#";
 			// 
 			// classToolStripMenuItem
@@ -860,13 +896,13 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 			// hTMLAndCSSToolStripMenuItem
 			// 
 			this->hTMLAndCSSToolStripMenuItem->Name = L"hTMLAndCSSToolStripMenuItem";
-			this->hTMLAndCSSToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->hTMLAndCSSToolStripMenuItem->Size = System::Drawing::Size(153, 22);
 			this->hTMLAndCSSToolStripMenuItem->Text = L"HTML and CSS";
 			// 
 			// cSharpToolStripMenuItem
 			// 
 			this->cSharpToolStripMenuItem->Name = L"cSharpToolStripMenuItem";
-			this->cSharpToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->cSharpToolStripMenuItem->Size = System::Drawing::Size(153, 22);
 			this->cSharpToolStripMenuItem->Text = L"C Sharp";
 			// 
 			// helpToolStripMenuItem
@@ -883,44 +919,21 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->aboutToolStripMenuItem->Text = L"About";
 			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::aboutToolStripMenuItem_Click);
 			// 
 			// creditsToolStripMenuItem
 			// 
 			this->creditsToolStripMenuItem->Name = L"creditsToolStripMenuItem";
-			this->creditsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			// 
-			// backgroundToolStripMenuItem
+			// timer1
 			// 
-			this->backgroundToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3)
-				{
-				this->toolStripMenuItem55,
-					this->toolStripMenuItem56, this->toolStripMenuItem57
-				});
-			this->backgroundToolStripMenuItem->Name = L"backgroundToolStripMenuItem";
-			this->backgroundToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->backgroundToolStripMenuItem->Text = L"Background";
-			// 
-			// toolStripMenuItem55
-			// 
-			this->toolStripMenuItem55->Name = L"toolStripMenuItem55";
-			this->toolStripMenuItem55->Size = System::Drawing::Size(180, 22);
-			this->toolStripMenuItem55->Text = L"01";
-			// 
-			// toolStripMenuItem56
-			// 
-			this->toolStripMenuItem56->Name = L"toolStripMenuItem56";
-			this->toolStripMenuItem56->Size = System::Drawing::Size(180, 22);
-			this->toolStripMenuItem56->Text = L"02";
-			// 
-			// toolStripMenuItem57
-			// 
-			this->toolStripMenuItem57->Name = L"toolStripMenuItem57";
-			this->toolStripMenuItem57->Size = System::Drawing::Size(180, 22);
-			this->toolStripMenuItem57->Text = L"03";
+			this->timer1->Enabled = true;
+			this->timer1->Interval = 5000;
+			this->timer1->Tick += gcnew System::EventHandler(this, &Form1::timer1_Tick);
 			// 
 			// Form1
 			// 
@@ -946,6 +959,21 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 		MessageBox::Show("Version: 1.0.01\n25/09/2020");
 		}
 private: System::Void deleteToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+	}
+private: System::Void toolStripMenuItem55_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+	this->BackColor = Color::Red;
+	}
+private: System::Void toolStripMenuItem57_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+	
+	}
+private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e)
+	{
+	Application::Exit();
+	}
+private: System::Void closeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 	}
 };
