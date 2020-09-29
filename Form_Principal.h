@@ -1,5 +1,5 @@
 #pragma once
-#include "Form_Principal.h"
+
 
 namespace ProjetoCLR {
 
@@ -11,12 +11,12 @@ namespace ProjetoCLR {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for Form1
+	/// Summary for Form_Principal
 	/// </summary>
-	public ref class Form1 : public System::Windows::Forms::Form
+	public ref class Form_Principal : public System::Windows::Forms::Form
 	{
 	public:
-		Form1(void)
+		Form_Principal(void)
 		{
 			InitializeComponent();
 			//
@@ -28,42 +28,33 @@ namespace ProjetoCLR {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~Form1()
+		~Form_Principal()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+	private: System::Windows::Forms::MenuStrip^ menuStrip2;
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ fileToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ newToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ openToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ saveToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ saveAsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ closeToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ editToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ copyToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ cutToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ deleteToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ cutToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ viewToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ backgroundToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem55;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem56;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
 	private: System::Windows::Forms::ToolStripMenuItem^ projectsToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ projectsToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ helpToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ hTMLToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ cSSToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ cToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ cToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ classToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem2;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem3;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem4;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem5;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem6;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem7;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem8;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem9;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem10;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem11;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem12;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem13;
-	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem14;
-	private: System::Windows::Forms::ToolStripMenuItem^ documentsToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ tipsToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ finalProjectToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ classToolStripMenuItem3;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem42;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem43;
@@ -81,6 +72,7 @@ namespace ProjetoCLR {
 	private: System::Windows::Forms::ToolStripMenuItem^ documentsToolStripMenuItem3;
 	private: System::Windows::Forms::ToolStripMenuItem^ tipsToolStripMenuItem3;
 	private: System::Windows::Forms::ToolStripMenuItem^ fianalProjectToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ cSSToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ classToolStripMenuItem2;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem29;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem30;
@@ -98,6 +90,7 @@ namespace ProjetoCLR {
 	private: System::Windows::Forms::ToolStripMenuItem^ documentsToolStripMenuItem2;
 	private: System::Windows::Forms::ToolStripMenuItem^ tipsToolStripMenuItem2;
 	private: System::Windows::Forms::ToolStripMenuItem^ finalProjectToolStripMenuItem1;
+	private: System::Windows::Forms::ToolStripMenuItem^ cToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ classToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem15;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem16;
@@ -116,32 +109,36 @@ namespace ProjetoCLR {
 	private: System::Windows::Forms::ToolStripMenuItem^ documentsToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ tipsToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ finalExamToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ cToolStripMenuItem1;
+	private: System::Windows::Forms::ToolStripMenuItem^ classToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem2;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem3;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem4;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem5;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem6;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem7;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem8;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem9;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem10;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem11;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem12;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem13;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem14;
+	private: System::Windows::Forms::ToolStripMenuItem^ documentsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ tipsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ finalProjectToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ projectsToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ hTMLAndCSSToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ cSharpToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ helpToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ creditsToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ newToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ openToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ saveToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ saveAsToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ closeToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ copyToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ cutToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ deleteToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ cutToolStripMenuItem1;
-private: System::Windows::Forms::ToolStripMenuItem^ backgroundToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem55;
-private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem56;
-private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
-private: System::Windows::Forms::Timer^ timer1;
-
-private: System::ComponentModel::IContainer^ components;
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-
+		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -150,9 +147,7 @@ private: System::ComponentModel::IContainer^ components;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
-			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->newToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->openToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -249,24 +244,23 @@ private: System::ComponentModel::IContainer^ components;
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
-			this->menuStrip1->SuspendLayout();
+			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// menuStrip1
+			// menuStrip2
 			// 
-			this->menuStrip1->BackColor = System::Drawing::SystemColors::Control;
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6)
+			this->menuStrip2->BackColor = System::Drawing::SystemColors::Control;
+			this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6)
 				{
 				this->fileToolStripMenuItem,
 					this->editToolStripMenuItem, this->viewToolStripMenuItem, this->projectsToolStripMenuItem, this->projectsToolStripMenuItem1,
 					this->helpToolStripMenuItem
 				});
-			this->menuStrip1->Location = System::Drawing::Point(0, 0);
-			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(780, 24);
-			this->menuStrip1->TabIndex = 0;
-			this->menuStrip1->Text = L"menuStrip1";
+			this->menuStrip2->Location = System::Drawing::Point(0, 0);
+			this->menuStrip2->Name = L"menuStrip2";
+			this->menuStrip2->Size = System::Drawing::Size(784, 24);
+			this->menuStrip2->TabIndex = 1;
+			this->menuStrip2->Text = L"menuStrip2";
 			// 
 			// fileToolStripMenuItem
 			// 
@@ -282,33 +276,32 @@ private: System::ComponentModel::IContainer^ components;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->newToolStripMenuItem->Text = L"New";
 			// 
 			// openToolStripMenuItem
 			// 
 			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->openToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->openToolStripMenuItem->Text = L"Open";
 			// 
 			// saveToolStripMenuItem
 			// 
 			this->saveToolStripMenuItem->Name = L"saveToolStripMenuItem";
-			this->saveToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->saveToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->saveToolStripMenuItem->Text = L"Save";
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->saveAsToolStripMenuItem->Text = L"Save as";
 			// 
 			// closeToolStripMenuItem
 			// 
 			this->closeToolStripMenuItem->Name = L"closeToolStripMenuItem";
-			this->closeToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->closeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->closeToolStripMenuItem->Text = L"Close";
-			this->closeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::closeToolStripMenuItem_Click);
 			// 
 			// editToolStripMenuItem
 			// 
@@ -338,7 +331,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->deleteToolStripMenuItem->Name = L"deleteToolStripMenuItem";
 			this->deleteToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->deleteToolStripMenuItem->Text = L"Paste";
-			this->deleteToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::deleteToolStripMenuItem_Click);
 			// 
 			// cutToolStripMenuItem1
 			// 
@@ -372,7 +364,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem55->Name = L"toolStripMenuItem55";
 			this->toolStripMenuItem55->Size = System::Drawing::Size(86, 22);
 			this->toolStripMenuItem55->Text = L"01";
-			this->toolStripMenuItem55->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem55_Click);
 			// 
 			// toolStripMenuItem56
 			// 
@@ -385,7 +376,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem57->Name = L"toolStripMenuItem57";
 			this->toolStripMenuItem57->Size = System::Drawing::Size(86, 22);
 			this->toolStripMenuItem57->Text = L"03";
-			this->toolStripMenuItem57->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem57_Click);
 			// 
 			// projectsToolStripMenuItem
 			// 
@@ -923,7 +913,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
 			this->aboutToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->aboutToolStripMenuItem->Text = L"About";
-			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::aboutToolStripMenuItem_Click);
 			// 
 			// creditsToolStripMenuItem
 			// 
@@ -931,69 +920,26 @@ private: System::ComponentModel::IContainer^ components;
 			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			// 
-			// timer1
-			// 
-			this->timer1->Enabled = true;
-			this->timer1->Interval = 5000;
-			this->timer1->Tick += gcnew System::EventHandler(this, &Form1::timer1_Tick);
-			// 
-			// Form1
+			// Form_Principal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(780, 638);
-			this->Controls->Add(this->menuStrip1);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
-			this->MainMenuStrip = this->menuStrip1;
-			this->Name = L"Form1";
+			this->ClientSize = System::Drawing::Size(784, 642);
+			this->Controls->Add(this->menuStrip2);
+			this->Name = L"Form_Principal";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L" ";
-			this->menuStrip1->ResumeLayout(false);
-			this->menuStrip1->PerformLayout();
+			this->Text = L"Form_Principal";
+			this->Load += gcnew System::EventHandler(this, &Form_Principal::Form_Principal_Load);
+			this->menuStrip2->ResumeLayout(false);
+			this->menuStrip2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 			}
 #pragma endregion
-
-	private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void Form_Principal_Load(System::Object^ sender, System::EventArgs^ e)
 		{
-		MessageBox::Show("Version: 1.0.01\n25/09/2020");
+		
 		}
-private: System::Void deleteToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-	}
-private: System::Void toolStripMenuItem55_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-	this->BackColor = Color::Red;
-	}
-private: System::Void toolStripMenuItem57_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-	
-	}
-private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e)
-	{
-	//Application::Exit();
-	//this->Close();
-	
-	
-	this->Hide();
-	
-	ProjetoCLR::Form_Principal formS;
-	
-	formS.ShowDialog();
-	Form1::Close();
-	
-	
-	//this->Show();
-	
-	
-
-
-	}
-private: System::Void closeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-	}
 };
 }
