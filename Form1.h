@@ -133,7 +133,12 @@ private: System::Windows::Forms::ToolStripMenuItem^ backgroundToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem55;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem56;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem57;
-private: System::Windows::Forms::Timer^ timer1;
+public: System::Windows::Forms::Timer^ timer1;
+public: System::Windows::Forms::Timer^ timer2;
+
+public:
+private:
+
 
 private: System::ComponentModel::IContainer^ components;
 
@@ -250,6 +255,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -937,6 +943,12 @@ private: System::ComponentModel::IContainer^ components;
 			this->timer1->Interval = 5000;
 			this->timer1->Tick += gcnew System::EventHandler(this, &Form1::timer1_Tick);
 			// 
+			// timer2
+			// 
+			this->timer2->Enabled = true;
+			this->timer2->Interval = 4995;
+			this->timer2->Tick += gcnew System::EventHandler(this, &Form1::timer2_Tick);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -949,6 +961,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L" ";
+			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -976,24 +989,40 @@ private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e)
 	{
 	//Application::Exit();
 	//this->Close();
-	
-	
-	this->Hide();
-	
+
+	/*this->Hide();
 	ProjetoCLR::Form_Principal formS;
-	
 	formS.ShowDialog();
-	Form1::Close();
-	
+
+	this->Close();*/
+	//Form1::Close();
+	//timer1->Stop();
 	
 	//this->Show();
-	
-	
-
-
 	}
 private: System::Void closeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 	{
+	}
+private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e)
+	{
+			{
+		
+			}
+	}
+private: System::Void timer2_Tick(System::Object^ sender, System::EventArgs^ e)
+	{
+	//if (timer1->Interval >= 4995)
+	//	{
+	//	this->Hide();
+	//	ProjetoCLR::Form_Principal formS;
+	//	formS.ShowDialog();
+	//	//this->Close();
+
+	//	timer1->Stop();
+	//	timer2->Stop();
+		
+		}
+	
 	}
 };
 }
