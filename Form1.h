@@ -35,6 +35,8 @@ namespace ProjetoCLR {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Timer^ timer1;
+	protected:
 
 	protected:
 
@@ -133,7 +135,7 @@ namespace ProjetoCLR {
 
 
 
-public: System::Windows::Forms::Timer^ timer1;
+
 
 
 public:
@@ -201,14 +203,21 @@ private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e)
 	{
 	//Application::Exit();
 	//this->Close();
-
-	//this->Hide();
-	ProjetoCLR::Form_Principal formS;
-	formS.Show();
 	timer1->Stop();
-	//formS.ShowDialog();
-
+	this->Hide();
+	
+	ProjetoCLR::Form_Principal Principal;
+	
+	Principal.ShowDialog();
+	
+	//Principal.Show();
+	//timer1->Stop();
 	//this->Close();
+	
+	
+	//Principal.Show();
+
+	
 	//Form1::Close();
 	//timer1->Stop();
 	

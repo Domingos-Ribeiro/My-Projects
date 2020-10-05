@@ -133,6 +133,7 @@ namespace ProjetoCLR {
 	private: System::Windows::Forms::ToolStripMenuItem^ helpToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ creditsToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 
 	private:
 		/// <summary>
@@ -244,6 +245,7 @@ namespace ProjetoCLR {
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->minimizeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -264,10 +266,10 @@ namespace ProjetoCLR {
 			// 
 			// fileToolStripMenuItem
 			// 
-			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5)
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6)
 				{
 				this->newToolStripMenuItem,
-					this->openToolStripMenuItem, this->saveToolStripMenuItem, this->saveAsToolStripMenuItem, this->closeToolStripMenuItem
+					this->openToolStripMenuItem, this->saveToolStripMenuItem, this->saveAsToolStripMenuItem, this->closeToolStripMenuItem, this->minimizeToolStripMenuItem
 				});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
 			this->fileToolStripMenuItem->Size = System::Drawing::Size(37, 20);
@@ -302,6 +304,7 @@ namespace ProjetoCLR {
 			this->closeToolStripMenuItem->Name = L"closeToolStripMenuItem";
 			this->closeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->closeToolStripMenuItem->Text = L"Close";
+			this->closeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::closeToolStripMenuItem_Click);
 			// 
 			// editToolStripMenuItem
 			// 
@@ -920,11 +923,19 @@ namespace ProjetoCLR {
 			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			// 
+			// minimizeToolStripMenuItem
+			// 
+			this->minimizeToolStripMenuItem->Name = L"minimizeToolStripMenuItem";
+			this->minimizeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->minimizeToolStripMenuItem->Text = L"Minimize";
+			this->minimizeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::minimizeToolStripMenuItem_Click);
+			// 
 			// Form_Principal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(784, 642);
+			this->ControlBox = false;
 			this->Controls->Add(this->menuStrip2);
 			this->Name = L"Form_Principal";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -939,8 +950,16 @@ namespace ProjetoCLR {
 #pragma endregion
 	private: System::Void Form_Principal_Load(System::Object^ sender, System::EventArgs^ e)
 		{
-		
+				
 		}
 		
+private: System::Void closeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+	Application::Exit();
+	}
+private: System::Void minimizeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+	this->WindowState = FormWindowState::Minimized;
+	}
 };
 }
