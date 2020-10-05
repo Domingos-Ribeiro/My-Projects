@@ -155,6 +155,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			this->saveToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->saveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->closeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->minimizeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->editToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->copyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->cutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -245,7 +246,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->minimizeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -260,7 +260,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 				});
 			this->menuStrip2->Location = System::Drawing::Point(0, 0);
 			this->menuStrip2->Name = L"menuStrip2";
-			this->menuStrip2->Size = System::Drawing::Size(784, 24);
+			this->menuStrip2->Size = System::Drawing::Size(984, 24);
 			this->menuStrip2->TabIndex = 1;
 			this->menuStrip2->Text = L"menuStrip2";
 			// 
@@ -298,6 +298,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
 			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->saveAsToolStripMenuItem->Text = L"Save as";
+			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::saveAsToolStripMenuItem_Click);
 			// 
 			// closeToolStripMenuItem
 			// 
@@ -305,6 +306,13 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			this->closeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->closeToolStripMenuItem->Text = L"Close";
 			this->closeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::closeToolStripMenuItem_Click);
+			// 
+			// minimizeToolStripMenuItem
+			// 
+			this->minimizeToolStripMenuItem->Name = L"minimizeToolStripMenuItem";
+			this->minimizeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->minimizeToolStripMenuItem->Text = L"Minimize";
+			this->minimizeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::minimizeToolStripMenuItem_Click);
 			// 
 			// editToolStripMenuItem
 			// 
@@ -923,23 +931,16 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			// 
-			// minimizeToolStripMenuItem
-			// 
-			this->minimizeToolStripMenuItem->Name = L"minimizeToolStripMenuItem";
-			this->minimizeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->minimizeToolStripMenuItem->Text = L"Minimize";
-			this->minimizeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::minimizeToolStripMenuItem_Click);
-			// 
 			// Form_Principal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(784, 642);
+			this->ClientSize = System::Drawing::Size(984, 762);
 			this->ControlBox = false;
 			this->Controls->Add(this->menuStrip2);
 			this->Name = L"Form_Principal";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Form_Principal";
+			this->Text = L"Segundo Projeto";
 			this->Load += gcnew System::EventHandler(this, &Form_Principal::Form_Principal_Load);
 			this->menuStrip2->ResumeLayout(false);
 			this->menuStrip2->PerformLayout();
@@ -950,7 +951,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 #pragma endregion
 	private: System::Void Form_Principal_Load(System::Object^ sender, System::EventArgs^ e)
 		{
-				
+		
 		}
 		
 private: System::Void closeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
@@ -960,6 +961,10 @@ private: System::Void closeToolStripMenuItem_Click(System::Object^ sender, Syste
 private: System::Void minimizeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 	this->WindowState = FormWindowState::Minimized;
+	}
+private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+	EditorBrowsableState
 	}
 };
 }

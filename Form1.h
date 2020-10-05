@@ -165,7 +165,7 @@ private: System::ComponentModel::IContainer^ components;
 			// timer1
 			// 
 			this->timer1->Enabled = true;
-			this->timer1->Interval = 5000;
+			this->timer1->Interval = 3000;
 			this->timer1->Tick += gcnew System::EventHandler(this, &Form1::timer1_Tick);
 			// 
 			// Form1
@@ -174,6 +174,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(780, 638);
+			this->ControlBox = false;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
