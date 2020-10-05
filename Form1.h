@@ -202,11 +202,13 @@ private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e)
 	//Application::Exit();
 	//this->Close();
 
-	/*this->Hide();
+	//this->Hide();
 	ProjetoCLR::Form_Principal formS;
-	formS.ShowDialog();
+	formS.Show();
+	timer1->Stop();
+	//formS.ShowDialog();
 
-	this->Close();*/
+	//this->Close();
 	//Form1::Close();
 	//timer1->Stop();
 	
@@ -223,17 +225,17 @@ private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e)
 	}
 private: System::Void timer2_Tick(System::Object^ sender, System::EventArgs^ e)
 	{
-	if (timer1->Interval >= 4995)
-		{
-		//this->Hide();
-		ProjetoCLR::Form_Principal formS;
-		formS.Show();
-		this->Close();
+	//if (timer1->Interval >= 4995)
+	//	{
+	//	this->Hide();
+	//	ProjetoCLR::Form_Principal formS;
+	//	formS.Show();
+	//	//this->Close();
 
-		timer1->Stop();
-	
-		
-		}
+	//	timer1->Stop();
+	//
+	//	
+	//	}
 	
 	}
 };
