@@ -134,6 +134,8 @@ namespace ProjetoCLR {
 	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ creditsToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
+private: System::Windows::Forms::GroupBox^ groupBox1;
+private: System::Windows::Forms::GroupBox^ groupBox2;
 
 	private:
 		/// <summary>
@@ -246,6 +248,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -278,39 +282,39 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->newToolStripMenuItem->Text = L"New";
 			// 
 			// openToolStripMenuItem
 			// 
 			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->openToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->openToolStripMenuItem->Text = L"Open";
 			// 
 			// saveToolStripMenuItem
 			// 
 			this->saveToolStripMenuItem->Name = L"saveToolStripMenuItem";
-			this->saveToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->saveToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->saveToolStripMenuItem->Text = L"Save";
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->saveAsToolStripMenuItem->Text = L"Save as";
 			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::saveAsToolStripMenuItem_Click);
 			// 
 			// closeToolStripMenuItem
 			// 
 			this->closeToolStripMenuItem->Name = L"closeToolStripMenuItem";
-			this->closeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->closeToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->closeToolStripMenuItem->Text = L"Close";
 			this->closeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::closeToolStripMenuItem_Click);
 			// 
 			// minimizeToolStripMenuItem
 			// 
 			this->minimizeToolStripMenuItem->Name = L"minimizeToolStripMenuItem";
-			this->minimizeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->minimizeToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->minimizeToolStripMenuItem->Text = L"Minimize";
 			this->minimizeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::minimizeToolStripMenuItem_Click);
 			// 
@@ -931,12 +935,30 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			// 
+			// groupBox1
+			// 
+			this->groupBox1->Location = System::Drawing::Point(60, 128);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(276, 536);
+			this->groupBox1->TabIndex = 2;
+			this->groupBox1->TabStop = false;
+			// 
+			// groupBox2
+			// 
+			this->groupBox2->Location = System::Drawing::Point(645, 128);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(276, 536);
+			this->groupBox2->TabIndex = 2;
+			this->groupBox2->TabStop = false;
+			// 
 			// Form_Principal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(984, 762);
 			this->ControlBox = false;
+			this->Controls->Add(this->groupBox2);
+			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->menuStrip2);
 			this->Name = L"Form_Principal";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
