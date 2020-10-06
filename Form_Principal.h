@@ -926,8 +926,9 @@ private: System::Windows::Forms::GroupBox^ groupBox2;
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(111, 22);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->aboutToolStripMenuItem->Text = L"About";
+			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::aboutToolStripMenuItem_Click);
 			// 
 			// creditsToolStripMenuItem
 			// 
@@ -987,6 +988,10 @@ private: System::Void minimizeToolStripMenuItem_Click(System::Object^ sender, Sy
 private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 	
+	}
+private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+
 	}
 };
 }
