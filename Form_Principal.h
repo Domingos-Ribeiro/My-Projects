@@ -940,7 +940,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 			this->Controls->Add(this->menuStrip2);
 			this->Name = L"Form_Principal";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Segundo Projeto";
+			this->Text = L"Resumo da Matéria";
 			this->Load += gcnew System::EventHandler(this, &Form_Principal::Form_Principal_Load);
 			this->menuStrip2->ResumeLayout(false);
 			this->menuStrip2->PerformLayout();
@@ -964,7 +964,7 @@ private: System::Void minimizeToolStripMenuItem_Click(System::Object^ sender, Sy
 	}
 private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-	EditorBrowsableState
+	
 	}
 };
 }
