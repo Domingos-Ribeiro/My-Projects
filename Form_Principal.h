@@ -962,7 +962,7 @@ private: System::Windows::Forms::Button^ button2;
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(212, 70);
 			this->button1->TabIndex = 3;
-			this->button1->Text = L"button1";
+			this->button1->Text = L"ON";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// button2
@@ -971,7 +971,7 @@ private: System::Windows::Forms::Button^ button2;
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(212, 70);
 			this->button2->TabIndex = 3;
-			this->button2->Text = L"button1";
+			this->button2->Text = L"OFF";
 			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// Form_Principal
