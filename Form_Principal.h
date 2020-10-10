@@ -136,8 +136,8 @@ namespace ProjetoCLR {
 private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
 private: System::Windows::Forms::GroupBox^ groupBox1;
 private: System::Windows::Forms::GroupBox^ groupBox2;
-private: System::Windows::Forms::Button^ button1;
-private: System::Windows::Forms::Button^ button2;
+
+
 
 	private:
 		/// <summary>
@@ -252,8 +252,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -956,32 +954,12 @@ private: System::Windows::Forms::Button^ button2;
 			this->groupBox2->TabIndex = 2;
 			this->groupBox2->TabStop = false;
 			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(384, 248);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(212, 70);
-			this->button1->TabIndex = 3;
-			this->button1->Text = L"ON";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(384, 433);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(212, 70);
-			this->button2->TabIndex = 3;
-			this->button2->Text = L"OFF";
-			this->button2->UseVisualStyleBackColor = true;
-			// 
 			// Form_Principal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(984, 762);
 			this->ControlBox = false;
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->menuStrip2);
