@@ -134,8 +134,8 @@ namespace ProjetoCLR {
 	private: System::Windows::Forms::ToolStripMenuItem^ aboutToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ creditsToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ minimizeToolStripMenuItem;
-private: System::Windows::Forms::GroupBox^ groupBox1;
-private: System::Windows::Forms::GroupBox^ groupBox2;
+
+
 
 
 
@@ -250,8 +250,6 @@ private: System::Windows::Forms::GroupBox^ groupBox2;
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -938,30 +936,12 @@ private: System::Windows::Forms::GroupBox^ groupBox2;
 			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			// 
-			// groupBox1
-			// 
-			this->groupBox1->Location = System::Drawing::Point(60, 128);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(276, 536);
-			this->groupBox1->TabIndex = 2;
-			this->groupBox1->TabStop = false;
-			// 
-			// groupBox2
-			// 
-			this->groupBox2->Location = System::Drawing::Point(645, 128);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(276, 536);
-			this->groupBox2->TabIndex = 2;
-			this->groupBox2->TabStop = false;
-			// 
 			// Form_Principal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(984, 762);
 			this->ControlBox = false;
-			this->Controls->Add(this->groupBox2);
-			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->menuStrip2);
 			this->Name = L"Form_Principal";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
