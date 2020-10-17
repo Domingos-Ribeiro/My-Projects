@@ -10,12 +10,12 @@ namespace ProjetoCLR {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for About
+	/// Summary for Credits
 	/// </summary>
-	public ref class About : public System::Windows::Forms::Form
+	public ref class Credits : public System::Windows::Forms::Form
 	{
 	public:
-		About(void)
+		Credits(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace ProjetoCLR {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~About()
+		~Credits()
 		{
 			if (components)
 			{
@@ -35,7 +35,6 @@ namespace ProjetoCLR {
 			}
 		}
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
 	protected:
 
 	private:
@@ -52,7 +51,6 @@ namespace ProjetoCLR {
 		void InitializeComponent(void)
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -60,34 +58,22 @@ namespace ProjetoCLR {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(49, 127);
+			this->label1->Location = System::Drawing::Point(72, 113);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(179, 19);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"toda a informação do curso.";
+			this->label1->Size = System::Drawing::Size(134, 19);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"© Domingos Ribeiro";
 			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(64, 95);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(149, 19);
-			this->label2->TabIndex = 0;
-			this->label2->Text = L"Programa para guardar";
-			// 
-			// About
+			// Credits
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 262);
-			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Name = L"About";
+			this->Name = L"Credits";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"About";
+			this->Text = L"Credits";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
