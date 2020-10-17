@@ -1,5 +1,5 @@
 #pragma once
-
+#include "About.h"
 
 namespace ProjetoCLR {
 
@@ -982,7 +982,9 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	}
 private: System::Void aboutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 	{
+	ProjetoCLR::About sobre;
 
+	sobre.ShowDialog();
 	}
 };
 }
