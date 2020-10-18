@@ -151,6 +151,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ documentsToolStripMenuItem4;
 private: System::Windows::Forms::ToolStripMenuItem^ tipsToolStripMenuItem4;
 private: System::Windows::Forms::ToolStripMenuItem^ finalProjectToolStripMenuItem2;
 private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
+private: System::Windows::Forms::ToolStripMenuItem^ site1ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ site2ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ site3ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ testeToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ siteFinalToolStripMenuItem;
 
 
 
@@ -277,11 +282,16 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 			this->finalProjectToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->projectsToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->hTMLAndCSSToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->site1ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->site2ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->site3ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->cSharpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->fSIToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->testeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->siteFinalToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->fSIToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -305,7 +315,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6)
 				{
 				this->newToolStripMenuItem,
-					this->openToolStripMenuItem, this->saveToolStripMenuItem, this->saveAsToolStripMenuItem, this->closeToolStripMenuItem, this->minimizeToolStripMenuItem
+					this->openToolStripMenuItem, this->saveToolStripMenuItem, this->saveAsToolStripMenuItem, this->minimizeToolStripMenuItem, this->closeToolStripMenuItem
 				});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
 			this->fileToolStripMenuItem->Size = System::Drawing::Size(37, 20);
@@ -314,39 +324,39 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(123, 22);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->newToolStripMenuItem->Text = L"New";
 			// 
 			// openToolStripMenuItem
 			// 
 			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(123, 22);
+			this->openToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->openToolStripMenuItem->Text = L"Open";
 			// 
 			// saveToolStripMenuItem
 			// 
 			this->saveToolStripMenuItem->Name = L"saveToolStripMenuItem";
-			this->saveToolStripMenuItem->Size = System::Drawing::Size(123, 22);
+			this->saveToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->saveToolStripMenuItem->Text = L"Save";
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(123, 22);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->saveAsToolStripMenuItem->Text = L"Save as";
 			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::saveAsToolStripMenuItem_Click);
 			// 
 			// closeToolStripMenuItem
 			// 
 			this->closeToolStripMenuItem->Name = L"closeToolStripMenuItem";
-			this->closeToolStripMenuItem->Size = System::Drawing::Size(123, 22);
+			this->closeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->closeToolStripMenuItem->Text = L"Close";
 			this->closeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::closeToolStripMenuItem_Click);
 			// 
 			// minimizeToolStripMenuItem
 			// 
 			this->minimizeToolStripMenuItem->Name = L"minimizeToolStripMenuItem";
-			this->minimizeToolStripMenuItem->Size = System::Drawing::Size(123, 22);
+			this->minimizeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->minimizeToolStripMenuItem->Text = L"Minimize";
 			this->minimizeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::minimizeToolStripMenuItem_Click);
 			// 
@@ -450,7 +460,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 					this->documentsToolStripMenuItem3, this->tipsToolStripMenuItem3, this->fianalProjectToolStripMenuItem
 				});
 			this->hTMLToolStripMenuItem->Name = L"hTMLToolStripMenuItem";
-			this->hTMLToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->hTMLToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->hTMLToolStripMenuItem->Text = L"HTML";
 			// 
 			// classToolStripMenuItem3
@@ -570,7 +580,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 					this->documentsToolStripMenuItem2, this->tipsToolStripMenuItem2, this->finalProjectToolStripMenuItem1
 				});
 			this->cSSToolStripMenuItem->Name = L"cSSToolStripMenuItem";
-			this->cSSToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->cSSToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->cSSToolStripMenuItem->Text = L"CSS";
 			// 
 			// classToolStripMenuItem2
@@ -690,7 +700,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 					this->documentsToolStripMenuItem1, this->tipsToolStripMenuItem1, this->finalExamToolStripMenuItem
 				});
 			this->cToolStripMenuItem->Name = L"cToolStripMenuItem";
-			this->cToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->cToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->cToolStripMenuItem->Text = L"C++";
 			// 
 			// classToolStripMenuItem1
@@ -816,7 +826,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 					this->documentsToolStripMenuItem, this->tipsToolStripMenuItem, this->finalProjectToolStripMenuItem
 				});
 			this->cToolStripMenuItem1->Name = L"cToolStripMenuItem1";
-			this->cToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->cToolStripMenuItem1->Size = System::Drawing::Size(107, 22);
 			this->cToolStripMenuItem1->Text = L"C#";
 			// 
 			// classToolStripMenuItem
@@ -936,7 +946,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 					this->documentsToolStripMenuItem4, this->tipsToolStripMenuItem4, this->finalProjectToolStripMenuItem2
 				});
 			this->fSIToolStripMenuItem->Name = L"fSIToolStripMenuItem";
-			this->fSIToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->fSIToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->fSIToolStripMenuItem->Text = L"FSI";
 			// 
 			// classToolStripMenuItem4
@@ -948,7 +958,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 					this->toolStripMenuItem64
 				});
 			this->classToolStripMenuItem4->Name = L"classToolStripMenuItem4";
-			this->classToolStripMenuItem4->Size = System::Drawing::Size(180, 22);
+			this->classToolStripMenuItem4->Size = System::Drawing::Size(139, 22);
 			this->classToolStripMenuItem4->Text = L"Class";
 			// 
 			// toolStripMenuItem58
@@ -996,19 +1006,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 			// documentsToolStripMenuItem4
 			// 
 			this->documentsToolStripMenuItem4->Name = L"documentsToolStripMenuItem4";
-			this->documentsToolStripMenuItem4->Size = System::Drawing::Size(180, 22);
+			this->documentsToolStripMenuItem4->Size = System::Drawing::Size(139, 22);
 			this->documentsToolStripMenuItem4->Text = L"Documents";
 			// 
 			// tipsToolStripMenuItem4
 			// 
 			this->tipsToolStripMenuItem4->Name = L"tipsToolStripMenuItem4";
-			this->tipsToolStripMenuItem4->Size = System::Drawing::Size(180, 22);
+			this->tipsToolStripMenuItem4->Size = System::Drawing::Size(139, 22);
 			this->tipsToolStripMenuItem4->Text = L"Tips";
 			// 
 			// finalProjectToolStripMenuItem2
 			// 
 			this->finalProjectToolStripMenuItem2->Name = L"finalProjectToolStripMenuItem2";
-			this->finalProjectToolStripMenuItem2->Size = System::Drawing::Size(180, 22);
+			this->finalProjectToolStripMenuItem2->Size = System::Drawing::Size(139, 22);
 			this->finalProjectToolStripMenuItem2->Text = L"Final Project";
 			this->finalProjectToolStripMenuItem2->Click += gcnew System::EventHandler(this, &Form_Principal::finalProjectToolStripMenuItem2_Click);
 			// 
@@ -1025,15 +1035,66 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 			// 
 			// hTMLAndCSSToolStripMenuItem
 			// 
+			this->hTMLAndCSSToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3)
+				{
+				this->site1ToolStripMenuItem,
+					this->site2ToolStripMenuItem, this->site3ToolStripMenuItem
+				});
 			this->hTMLAndCSSToolStripMenuItem->Name = L"hTMLAndCSSToolStripMenuItem";
 			this->hTMLAndCSSToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->hTMLAndCSSToolStripMenuItem->Text = L"HTML and CSS";
+			this->hTMLAndCSSToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::hTMLAndCSSToolStripMenuItem_Click);
+			// 
+			// site1ToolStripMenuItem
+			// 
+			this->site1ToolStripMenuItem->Name = L"site1ToolStripMenuItem";
+			this->site1ToolStripMenuItem->Size = System::Drawing::Size(102, 22);
+			this->site1ToolStripMenuItem->Text = L"Site 1";
+			this->site1ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::site1ToolStripMenuItem_Click);
+			// 
+			// site2ToolStripMenuItem
+			// 
+			this->site2ToolStripMenuItem->Name = L"site2ToolStripMenuItem";
+			this->site2ToolStripMenuItem->Size = System::Drawing::Size(102, 22);
+			this->site2ToolStripMenuItem->Text = L"Site 2";
+			// 
+			// site3ToolStripMenuItem
+			// 
+			this->site3ToolStripMenuItem->Name = L"site3ToolStripMenuItem";
+			this->site3ToolStripMenuItem->Size = System::Drawing::Size(102, 22);
+			this->site3ToolStripMenuItem->Text = L"Site 3";
 			// 
 			// cSharpToolStripMenuItem
 			// 
 			this->cSharpToolStripMenuItem->Name = L"cSharpToolStripMenuItem";
 			this->cSharpToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->cSharpToolStripMenuItem->Text = L"C Sharp";
+			// 
+			// fSIToolStripMenuItem1
+			// 
+			this->fSIToolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2)
+				{
+				this->testeToolStripMenuItem,
+					this->siteFinalToolStripMenuItem
+				});
+			this->fSIToolStripMenuItem1->Name = L"fSIToolStripMenuItem1";
+			this->fSIToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->fSIToolStripMenuItem1->Text = L"FSI";
+			this->fSIToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Form_Principal::fSIToolStripMenuItem1_Click);
+			// 
+			// testeToolStripMenuItem
+			// 
+			this->testeToolStripMenuItem->Name = L"testeToolStripMenuItem";
+			this->testeToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->testeToolStripMenuItem->Text = L"Teste";
+			this->testeToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::testeToolStripMenuItem_Click);
+			// 
+			// siteFinalToolStripMenuItem
+			// 
+			this->siteFinalToolStripMenuItem->Name = L"siteFinalToolStripMenuItem";
+			this->siteFinalToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->siteFinalToolStripMenuItem->Text = L"Site Final";
+			this->siteFinalToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::siteFinalToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -1059,13 +1120,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ fSIToolStripMenuItem1;
 			this->creditsToolStripMenuItem->Size = System::Drawing::Size(111, 22);
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			this->creditsToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::creditsToolStripMenuItem_Click);
-			// 
-			// fSIToolStripMenuItem1
-			// 
-			this->fSIToolStripMenuItem1->Name = L"fSIToolStripMenuItem1";
-			this->fSIToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
-			this->fSIToolStripMenuItem1->Text = L"FSI";
-			this->fSIToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Form_Principal::fSIToolStripMenuItem1_Click);
 			// 
 			// Form_Principal
 			// 
@@ -1121,6 +1175,22 @@ private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Win
 	{
 	}
 private: System::Void fSIToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+	
+	}
+private: System::Void hTMLAndCSSToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+
+	}
+private: System::Void site1ToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+
+	}
+private: System::Void testeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+	System::Diagnostics::Process::Start("https://domingos-ribeiro.github.io/Site---FSI/");
+	}
+private: System::Void siteFinalToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 	System::Diagnostics::Process::Start("http://z05.ti400.net/");
 	}
