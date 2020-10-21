@@ -158,7 +158,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ testeToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ siteFinalToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ teste1ToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ teste1ToolStripMenuItem1;
-private: System::Windows::Forms::Button^ button1;
+
 
 
 
@@ -297,7 +297,6 @@ private: System::Windows::Forms::Button^ button1;
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->aboutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->creditsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -1142,22 +1141,12 @@ private: System::Windows::Forms::Button^ button1;
 			this->creditsToolStripMenuItem->Text = L"Credits";
 			this->creditsToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form_Principal::creditsToolStripMenuItem_Click);
 			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(270, 295);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(465, 155);
-			this->button1->TabIndex = 2;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
 			// Form_Principal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(984, 762);
 			this->ControlBox = false;
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->menuStrip2);
 			this->Name = L"Form_Principal";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
