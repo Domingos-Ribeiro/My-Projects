@@ -18,9 +18,9 @@ namespace ProjetoCLR {
 		Credits(void)
 		{
 			InitializeComponent();
-			//
+			
 			//TODO: Add the constructor code here
-			//
+			
 		}
 
 	protected:
@@ -62,7 +62,7 @@ namespace ProjetoCLR {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(134, 19);
 			this->label1->TabIndex = 1;
-			this->label1->Text = L"© Domingos Ribeiro";
+			this->label1->Text = L"Â© Domingos Ribeiro";
 			// 
 			// Credits
 			// 
