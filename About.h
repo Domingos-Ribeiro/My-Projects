@@ -64,7 +64,7 @@ namespace ProjetoCLR {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(179, 19);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"toda a informação do curso.";
+			this->label1->Text = L"toda a informaÃ§Ã£o do curso.";
 			// 
 			// label2
 			// 
@@ -90,6 +90,8 @@ namespace ProjetoCLR {
 			this->Text = L"About";
 			this->ResumeLayout(false);
 			this->PerformLayout();
+			
+			// Normal
 
 			}
 #pragma endregion
